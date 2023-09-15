@@ -1,0 +1,3 @@
+/Users/jamesjohnson/Workspaces/localisation/build/CMakeFiles/foo.dir
+/Users/jamesjohnson/Workspaces/localisation/build/CMakeFiles/edit_cache.dir
+/Users/jamesjohnson/Workspaces/localisation/build/CMakeFiles/rebuild_cache.dir

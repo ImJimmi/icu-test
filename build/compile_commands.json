@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/jamesjohnson/Workspaces/localisation/build",
+  "command": "/usr/bin/clang++ -isystem /Users/jamesjohnson/Workspaces/localisation/dependencies/icu/include -g -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/foo.dir/main.cpp.o -c /Users/jamesjohnson/Workspaces/localisation/main.cpp",
+  "file": "/Users/jamesjohnson/Workspaces/localisation/main.cpp",
+  "output": "CMakeFiles/foo.dir/main.cpp.o"
+}
+]
