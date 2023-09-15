@@ -29,7 +29,7 @@ if (APPLE)
     )
     set_target_properties(IcuUC PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES ${ICU_INCLUDE_DIR}
-        IMPORTED_LOCATION ${ICU_LIB_DIR}/lib/libicuuc.a
+        IMPORTED_LOCATION ${ICU_LIB_DIR}/libicuuc.a
     )
 elseif(WIN32)
     set_target_properties(IcuData PROPERTIES
