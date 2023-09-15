@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.27)
 project(localisation)
 
-set(ICU_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/dependencies/icu/include)
 set(ICU_LIB_DIR ${CMAKE_SOURCE_DIR}/dependencies/icu/lib)
 
 add_library(IcuData STATIC IMPORTED)
@@ -11,6 +10,8 @@ add_library(IcuTU STATIC IMPORTED)
 add_library(IcuUC STATIC IMPORTED)
 
 if (APPLE)
+    set(ICU_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/dependencies/icu/include-macOS)
+
     set_target_properties(IcuData PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES ${ICU_INCLUDE_DIR}
         IMPORTED_LOCATION ${ICU_LIB_DIR}/libicudata.a
@@ -32,6 +33,8 @@ if (APPLE)
         IMPORTED_LOCATION ${ICU_LIB_DIR}/libicuuc.a
     )
 elseif(WIN32)
+    set(ICU_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/dependencies/icu/include-Win32)
+
     set_target_properties(IcuData PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES ${ICU_INCLUDE_DIR}
         IMPORTED_LOCATION ${ICU_LIB_DIR}/icudt.lib
@@ -50,7 +53,7 @@ elseif(WIN32)
     )
     set_target_properties(IcuUC PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES ${ICU_INCLUDE_DIR}
-        IMPORTED_LOCATION ${ICU_LIB_DIR}/icuuc.a
+        IMPORTED_LOCATION ${ICU_LIB_DIR}/icuuc.lib
     )
 endif()
 
