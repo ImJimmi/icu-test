@@ -1,5 +1,8 @@
 #include <any>
 #include <iostream>
+#include <string>
+#include <unordered_map>
+#include <vector>
 
 #include <unicode/fmtable.h>
 #include <unicode/msgfmt.h>
