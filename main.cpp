@@ -1,7 +1,9 @@
+#include <algorithm>
 #include <any>
 #include <iostream>
 #include <string>
 #include <unordered_map>
+#include <variant>
 #include <vector>
 
 #include <unicode/fmtable.h>
